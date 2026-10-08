@@ -8,7 +8,7 @@ fetch(`https://cors.io/?url=https://data.nasa.gov/docs/legacy/gvk9-iz74.json`)
     let facility = document.createElement('section')
     facility.innerHTML =  nasaData.map((facility, i )=> {
       //empty span to wait for the temperature value
-      return `<p id = "facility-${i}"> ${facility.center} , ${facility.city} , ${facility.country} , <span class="temp"> </span> </p>`
+      return `<p id = "facility-${i}"> ${facility.center} , ${facility.city} ,${facility.state} ${facility.country}  <span class="temp"> </span> </p>`
     }).join('')
           document.body.appendChild(facility)
 
